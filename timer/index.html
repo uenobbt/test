@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイマーアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>タイマー</h1>
+
+        <div class="display" id="display">00:00:00</div>
+
+        <div class="input-area">
+            <div class="input-group">
+                <label for="hours">時間</label>
+                <input type="number" id="hours" min="0" max="99" value="0">
+            </div>
+            <div class="input-group">
+                <label for="minutes">分</label>
+                <input type="number" id="minutes" min="0" max="59" value="0">
+            </div>
+            <div class="input-group">
+                <label for="seconds">秒</label>
+                <input type="number" id="seconds" min="0" max="59" value="0">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" onclick="startTimer()">スタート</button>
+            <button id="pauseBtn" onclick="pauseTimer()" disabled>一時停止</button>
+            <button id="resetBtn" onclick="resetTimer()">リセット</button>
+        </div>
+
+        <div class="message" id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
